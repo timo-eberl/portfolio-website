@@ -134,6 +134,10 @@ h2 {
     filter: grayscale(100%) drop-shadow(0 0 10px #2b56b3);
 }
 
+.preview:hover#adverse {
+    filter: grayscale(100%) drop-shadow(0 0 10px #542bb3);
+}
+
 .preview:hover#world-of-walls {
     filter: grayscale(100%) drop-shadow(0 0 10px #c2943e);
 }
