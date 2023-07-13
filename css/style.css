@@ -1,0 +1,308 @@
+body {
+    margin: 0;
+    height: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: var(--default-font-color);
+    background-color: var(--default-background-color);
+}
+
+header {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: var(--header-background-color);
+    font-size: var(--header-font-size);
+    color: var(--header-font-color);
+}
+
+.header-center {
+    display: flex;
+    justify-content: space-between;
+
+    width: var(--center-width);
+    margin-right: auto;
+    margin-left: auto;
+
+    transition: var(--transition-time);
+}
+
+main {
+    width: var(--center-width);
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    transition: var(--transition-time);
+}
+
+section {
+    padding-top: var(--header-size);
+    padding-top: var(--header-size);
+}
+
+h1 {
+    font-size: inherit;
+    font-weight: inherit;
+
+    margin: 0;
+    padding: var(--header-element-padding);
+    padding-left: 0;
+}
+
+a {
+    transition: var(--transition-time);
+}
+
+header a:hover {
+    color: var(--header-font-color-hover);
+}
+
+nav > ul {
+    display: flex;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    padding: var(--header-element-padding);
+}
+
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+nav a:last-child {
+    padding-right: 0;
+}
+
+h2 {
+    padding: 0 0 10px 0;
+    margin: 20px 0 30px 0;
+
+    border-bottom: 1px solid;
+    border-color: var(--h2-border-color);
+    
+    font-size: 2.3rem;
+}
+
+.preview h3 {
+    font-size: 1.7rem;
+}
+
+.preview-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: var(--preview-row-gap);
+    column-gap: var(--preview-column-gap);
+    
+    transition: var(--transition-time);
+}
+
+.preview {
+    width: var(--preview-width);
+    height: var(--preview-height);
+    position: relative;
+    text-align: center;
+
+    border-radius: 7px;
+
+    color: var(--preview-font-color) !important;
+    text-shadow: var(--preview-text-shadow) !important;
+
+    /* color that is visible, if the image does not load */
+    background-color: var(--preview-background-color-fallback);
+
+    transition: var(--transition-time);
+}
+
+.preview:hover {
+    filter: var(--preview-hover-filter);
+}
+
+.preview:hover#orpheus {
+    filter: grayscale(100%) drop-shadow(0 0 10px #2b56b3);
+}
+
+.preview:hover#world-of-walls {
+    filter: grayscale(100%) drop-shadow(0 0 10px #c2943e);
+}
+
+.preview:hover#castle-escape {
+    filter: grayscale(100%) drop-shadow(0 0 10px #883600);
+}
+
+.preview-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+}
+
+.preview-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+article > p {
+    width: var(--center-text-width);
+    margin: 30px auto;
+
+    font-size: 1.3em;
+}
+
+section > video, section > img, section > a > img {
+    max-width: var(--center-text-width);
+
+    border-radius: 7px;
+}
+
+#lists-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+
+    text-align: left;
+}
+
+#lists-container > * {
+    /* ensures that the width is adjusted for different screen sizes */
+    max-width: calc((100vw - 300px) / 3);
+    min-width: 11em;
+}
+
+#lists-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-size: 1.4rem;
+}
+
+#lists-container ul {
+    margin-top: 10px;
+
+    font-size: 1.2em;
+}
+
+button {
+    padding: 20px;
+    margin: 10px;
+
+    border-radius: 4px;
+    border: none;
+
+    cursor: inherit;
+
+    font-size: 1.2rem;
+}
+
+
+/* rescaling */
+:root {
+    --center-width: 1200px;
+    --center-text-width: calc(var(--center-width) * 0.75);
+    --preview-column-gap: 30px;
+    --preview-row-gap: 30px;
+    --preview-column-gap: calc(30 * (1200px / 1200));
+    --preview-row-gap: calc(30 * (1200px / 1200));
+
+    --preview-ratio: 1.3;
+    --number-of-previews-in-a-row: 3;
+
+    /* the added 0.0001 prevents a bug on firefox when resizing the window */
+    --preview-width: calc((var(--center-width) - (var(--preview-column-gap) * (var(--number-of-previews-in-a-row) - 1))) / (var(--number-of-previews-in-a-row) + 0.0001));
+    --preview-height: calc(var(--preview-width) * (1 / var(--preview-ratio)));
+
+    --header-element-padding: 0.9rem;
+    --header-font-size: 1.2rem;
+    /* the font is taking up 1.16 times the space of the font size (I think it is not font dependent) */
+    --header-size: calc(var(--header-font-size) * 1.16 + var(--header-element-padding) * 2);
+
+    --transition-time: 0.25s;
+}
+
+@media only screen and (max-width: 1300px) {
+    :root {
+        --center-width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    :root {
+        --center-width: 800px;
+
+        --number-of-previews-in-a-row: 2;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    :root {
+        --center-width: 600px;
+    }
+}
+
+/* mobile devices */
+@media only screen and (max-width: 700px) {
+    :root {
+        --center-width: 90vw;
+        --center-text-width: var(--center-width);
+
+        --number-of-previews-in-a-row: 1;
+        --preview-row-gap: calc(20 * (1200px / 1200));
+    }
+
+    /* remove navigation elements */
+    nav a {
+        display: none;
+    }
+    /* except for "Contact Me" */
+    nav a.dont-hide {
+        display: inherit;
+    }
+}
+
+
+/* color scheme */
+:root {
+    --default-font-color: #303030;
+    --default-background-color: #fff;
+
+    --header-background-color: #242729;
+    --header-font-color: #b2aca2;
+    --header-font-color-hover: #fff;
+
+    --h2-border-color: #303030;
+
+    --preview-font-color: #fff;
+    --preview-text-shadow: 0 0 0.3em #000, 0 0 0.7em #000;
+    --preview-background-color-fallback: #252b3f;
+    --preview-hover-filter: grayscale(100%) drop-shadow(0 0 10px #696969);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --default-font-color: #cac5be;
+        --default-background-color: #181a1b;
+
+        --h2-border-color: #414649;
+
+        --preview-hover-filter: grayscale(100%) drop-shadow(0 0 10px #969696);
+    }
+}

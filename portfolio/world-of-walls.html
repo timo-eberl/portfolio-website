@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- only allow resources from same origin. do not allow javascript and iframes -->
+    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'none'; child-src 'none'">
+    <meta name="author" content="Timo Eberl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World of Walls</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-center">
+            <a href="/"><h1>Timo Eberl</h1></a>
+            <nav>
+                <ul>
+                    <a href="https://github.com/timo-eberl/" target="_blank" class="dont-hide"><li>GitHub</li></a>
+                    <a href="mailto:timo.eberl2000@gmail.com" class="dont-hide"><li>Contact Me</li></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="world-of-walls">
+            <h2>World of Walls</h2>
+            <a href="/media/images/world-of-walls.jpg">
+                <img src="/media/images/world-of-walls.jpg" alt="World of Walls Screenshot">
+            </a>
+        </section>
+        <section id="details">
+            <h2>Details</h2>
+            <div id="lists-container">
+                <div>
+                    <h3>Project</h3>
+                    <ul>
+                        <li>Student project</li>
+                        <li>3 people</li>
+                        <li>2022</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Game Engine</h3>
+                    <ul>
+                        <li>Unreal Engine 5</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>My work</h3>
+                    <ul>
+                        <li>Destruction with UE Chaos</li>
+                        <li>Material Graph</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="about-world-of-walls">
+            <h2>About World of Walls</h2>
+            <article>
+                <p>
+                    <strong>World of Walls</strong> is a game prototype that was developed over one semester in a team of three at my university <strong>Hochschule der Medien</strong> as part of the lecture <strong>Gameplay Programming</strong>.
+                    <br>
+                    The mechanics fit mainly into a <strong>puzzle game</strong>, but there is also a <strong>platforming</strong> section.
+                </p>
+                <p>
+                    We have built walls with various functions to get a grasp of the architecture and functionality of <strong>Unreal Engine 5</strong>.
+                    <br>
+                    For example, I implemented an <strong>Angry Wall</strong> that explodes if you stand near it for too long.
+                    <br>
+                    Another wall I built is the <strong>Illusory Wall</strong>, which disappears with a cool effect when shot.
+                    <br>
+                    I also used <strong>Unreal Engine's Chaos System</strong> to create destructible walls.
+                </p>
+            </article>
+        </section>
+        <section id="images">
+            <h2>Images</h2>
+            <div class="preview-container">
+                <a href="/media/images/world-of-walls_destructible-wall.jpg" class="preview">
+                    <img src="/media/images/world-of-walls_destructible-wall.jpg" alt="World of Walls Screenshot - Destructible Wall" class="preview-img">
+                </a>
+                <a href="/media/images/world-of-walls_big-room.jpg" class="preview">
+                    <img src="/media/images/world-of-walls_big-room.jpg" alt="World of Walls Screenshot - Big Room" class="preview-img">
+                </a>
+                <a href="/media/images/world-of-walls_portal.jpg" class="preview">
+                    <img src="/media/images/world-of-walls_portal.jpg" alt="World of Walls Screenshot - Portal" class="preview-img">
+                </a>
+                <a href="/media/images/world-of-walls_illusory-wall.jpg" class="preview">
+                    <img src="/media/images/world-of-walls_illusory-wall.jpg" alt="World of Walls Screenshot - Illusory Wall" class="preview-img">
+                </a>
+            </div>
+        </section>
+        <section id="download">
+            <h2>Download</h2>
+            <a href="/media/download/world-of-walls_windows.zip" download>
+                <button>Download (Windows)</button>
+            </a>
+        </section>
+    </main>
+</body>
+</html>

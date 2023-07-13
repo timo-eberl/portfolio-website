@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- only allow resources from same origin. do not allow javascript and iframes -->
+    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'none'; child-src 'none'">
+    <meta name="author" content="Timo Eberl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timo Eberl</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-center">
+            <a href="/"><h1>Timo Eberl</h1></a>
+            <nav>
+                <ul>
+                    <a href="https://github.com/timo-eberl/" target="_blank" class="dont-hide"><li>GitHub</li></a>
+                    <a href="mailto:timo@timoeberl.de" class="dont-hide"><li>Contact Me</li></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="preview-container">
+                <a href="/portfolio/orpheus.html" class="preview" id="orpheus">
+                    <h3 class="preview-title">Orpheus</h3>
+                    <video src="/media/videos/orpheus-waves-preview.ogg" type="video/ogg" muted autoplay loop class="preview-img"></video>
+                </a>
+                <a href="/portfolio/world-of-walls.html" class="preview" id="world-of-walls">
+                    <h3 class="preview-title">World of Walls</h3>
+                    <img src="/media/images/world-of-walls.jpg" alt="World of Walls Preview Image" class="preview-img">
+                </a>
+                <a href="/portfolio/castle-escape.html" class="preview" id="castle-escape">
+                    <h3 class="preview-title">Castle Escape</h3>
+                    <img src="/media/images/castle-escape-preview.jpg" alt="Castle Escape Preview Image" class="preview-img">
+                </a>
+                <!-- <a href="https://youtu.be/-9Su_uasZrQ" class="preview">
+                    <h3 class="preview-title">No Way Out</h3>
+                    <img src="/media/images/no-way-out.jpg" alt="No Way Out Preview Image" class="preview-img">
+                </a> -->
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div id="lists-container">
+                <div>
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>HLSL</li>
+                        <li>C#</li>
+                        <li>Javascript</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Game Engines</h3>
+                    <ul>
+                        <li>Unity</li>
+                        <li>Unreal Engine 5</li>
+                        <!-- <li>Godot</li> -->
+                    </ul>
+                </div>
+                <div>
+                    <h3>Fields</h3>
+                    <ul>
+                        <li>Shader Programming</li>
+                        <li>Animations</li>
+                        <li>Gameplay Programming</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
