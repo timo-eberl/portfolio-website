@@ -99,6 +99,16 @@ h2 {
     font-size: 1.7rem;
 }
 
+section#my-work > h3 {
+    padding: 0 0 10px 0;
+    margin: 30px 0 30px 0;
+
+    border-bottom: 1px dashed;
+    border-color: var(--h2-border-color);
+    
+    font-size: 1.7rem;
+}
+
 .preview-container {
     display: flex;
     flex-wrap: wrap;
@@ -130,19 +140,23 @@ h2 {
     filter: var(--preview-hover-filter);
 }
 
+.preview:hover#endzone-2 {
+    filter: grayscale(100%) drop-shadow(0 0 10px rgb(85, 114, 48));
+}
+
 .preview:hover#orpheus {
-    filter: grayscale(100%) drop-shadow(0 0 10px #2b56b3);
+    filter: grayscale(100%) drop-shadow(0 0 10px #2b76b3);
 }
 
-.preview:hover#adverse {
-    filter: grayscale(100%) drop-shadow(0 0 10px #542bb3);
+.preview:hover#snake {
+    filter: grayscale(100%) drop-shadow(0 0 10px #b224eb);
 }
 
-.preview:hover#world-of-walls {
-    filter: grayscale(100%) drop-shadow(0 0 10px #c2943e);
+.preview:hover#iceolation {
+    filter: grayscale(100%) drop-shadow(0 0 10px rgb(40, 77, 197));
 }
 
-.preview:hover#castle-escape {
+.preview:hover#questributor {
     filter: grayscale(100%) drop-shadow(0 0 10px #883600);
 }
 
@@ -170,10 +184,14 @@ article > p {
     font-size: 1.3em;
 }
 
+
+
 section > video, section > img, section > a > img {
     max-width: var(--center-text-width);
 
     border-radius: 7px;
+
+    margin-bottom: 20px;
 }
 
 #lists-container {
