@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- only allow resources from same origin. do not allow javascript and iframes -->
+    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'none'; child-src 'none'">
+    <meta name="author" content="Timo Eberl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesh Slicing</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-center">
+            <a href="/"><h1>Timo Eberl</h1></a>
+            <nav>
+                <ul>
+                    <a href="https://github.com/timo-eberl/" target="_blank" class="dont-hide"><li>GitHub</li></a>
+                    <a href="mailto:timo@timoeberl.de" class="dont-hide"><li>Contact Me</li></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="mesh-slicing">
+            <h2>Mesh Slicing Tool</h2>
+            <video src="/media/videos/mesh-slicing-loop-1.webm" controls loop> Multiple geometric objects that are sliced along a rotating plane</video>
+        </section>
+        <section id="details">
+            <h2>Details</h2>
+            <div id="lists-container">
+                <div>
+                    <h3>Project</h3>
+                    <ul>
+                        <li>Tool for a student project</li>
+                        <li>Solo</li>
+                        <li>2023</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Technology</h3>
+                    <ul>
+                        <li>GDExtension (Godot)</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="about-mesh-slicing">
+            <h2>About the Mesh Slicing Tool</h2>
+            <article>
+                <p>
+                    This tool has been created to be used in a VR game where you can slice fruits thrown at you by other players. The game is still in development (as of 2023-11-28).
+                </p>
+                <p>
+                    It is implemented as a Extension for the Godot Engine (GDExtension) and adds the Node <code>SliceableMeshInstance3D</code> that can slice a mesh along a plane.
+                </p>
+            </article>
+            <a href="https://github.com/timo-eberl/mesh-slicing-gdextension" target="_blank">
+                <button>Find out more on GitHub &#129141;</button>
+            </a>
+        </section>
+    </main>
+</body>
+</html>

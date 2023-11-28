@@ -145,7 +145,7 @@ section#my-work > h3 {
 }
 
 .preview:hover#orpheus {
-    filter: grayscale(100%) drop-shadow(0 0 10px #2b76b3);
+    filter: grayscale(100%) drop-shadow(0 0 10px #1c4d75);
 }
 
 .preview:hover#snake {
@@ -158,6 +158,10 @@ section#my-work > h3 {
 
 .preview:hover#questributor {
     filter: grayscale(100%) drop-shadow(0 0 10px #883600);
+}
+
+.preview:hover#mesh-slicing {
+    filter: grayscale(100%) drop-shadow(0 0 10px rgb(121, 42, 40));
 }
 
 .preview-title {
